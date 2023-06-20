@@ -1,8 +1,7 @@
 import numpy as np
-import pandas as pd
-import random
-import warnings
-warnings.filterwarnings("ignore")
+from random import sample
+from warnings import filterwarnings
+filterwarnings("ignore")
 
 class TransForest:
 
@@ -59,7 +58,7 @@ class TransForest:
             else: 
                 # For each tree, injecting fixed labeled data + a subsample of the unlabeled data.
   
-                unlabeled_sample = random.sample(list(unlabeled), unlabeled_sample_size)                              
+                unlabeled_sample = sample(list(unlabeled), unlabeled_sample_size)                              
                 
                 if (labeled.size) > 0: # semi-supervised case
                     sample_index = np.concatenate((labeled, unlabeled_sample))
@@ -351,7 +350,6 @@ class TransTree:
         self.n_nodes += 2
 
 
-
         return node
 
   
@@ -364,8 +362,3 @@ class Node:
         self.path_length = path_length
         self.label = label
         self.node_type = node_type
-
-
-
-
-
