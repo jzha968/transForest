@@ -21,6 +21,6 @@ feature_importance = transForest.feature_importances_
 - python == 3.10.5
 - sklearn == 1.1.1
 - numpy == 1.23.1
-- pyod == 1.0.5 (https://pyod.readthedocs.io/en/latest/install.html)
+- pyod == 1.0.5 (https://github.com/yzhao062/pyod)
 - ADBench (https://github.com/Minqi824/ADBench)
 - HIF (https://github.com/pfmarteau/HIF)
